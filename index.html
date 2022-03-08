@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/21bce9948d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto&display=swap" rel="stylesheet">
+    <title>Beer of Doom</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    
+</head>
+<body id="body"> <!--identificación para buscar la imagen de fondo-->
+    <header>
+        <h1>
+            <img src="assets/img/logo.png">
+        </h1>
+        <select fondo="fondo" id="fondo" onchange="cambiarFondo(this)"> <!-- Estiliza la página -->
+            <option value="url(https://images4.alphacoders.com/793/7938.jpg)">Cerveza</option>
+            <option value="url(https://images.alphacoders.com/276/276881.jpg)">Margarita</option>
+            <option value="url(https://images6.alphacoders.com/766/766532.jpg)">Mojito</option>
+            <option value="url(https://images7.alphacoders.com/409/409769.jpg)">Gintónic</option>
+        </select>
+
+        <button class="switch" id="switch">
+            <span><i class="fa-solid fa-sun"></i></span>
+            <span><i class="fa-solid fa-moon"></i></span>
+        </button>
+    
+    </header>
+    <main>
+        <section>
+            
+            <div class="container-text">
+                <textarea id="textarea" placeholder="Introduce los nombres en líneas separadas... " cols="30" rows="12" onkeyup="countChars(this)"></textarea>
+                <div class="text">
+                    <button id="sorteo" onclick="randomSelect()" >¡Sorteo!</button>
+                    <input type="button" onclick="reset()" value="Reset" id="resetButton"></input>
+
+                </div>
+                <audio id="audio" src="assets/sound/coins-falling.mp3"></audio>
+            </div>
+            <div class="bag-main">
+                <h3>Quien invita es: <span id = "winner"></span></h3>
+                <div class="container-bag" id="bag">
+                    
+                    <!-- imagen de la bolsa -->
+                    <!-- texto nombres -->
+                </div>
+                <!--  -->
+                <!-- CODIGO PARA EL RESET DEL BOTON -->
+                <!-- <input type="button" onclick="reset()" value="Reset">
+                    function reset() {
+                        document.getElementById("textarea").value = "";
+                    }
+                -->
+                <!-- div para texto y botones -->
+            </div>
+            <!-- div para imagen de bolsa y nombres del interior -->
+            <div id="resultado">
+                <!-- <h3>El ganador es: <span id = "winner"></span></h3> -->
+                <ol id="list" in></ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span>Copyright: 123 Coders 2022</span>
+        <span>Invitanos a una caña 🍺</span>
+        <script src="assets/js/main.js"></script>
+    </footer>
+</body>
+</html>
