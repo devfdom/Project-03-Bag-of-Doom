@@ -1,4 +1,0 @@
-function moveRover(orders) {
-
-    return;
-}
